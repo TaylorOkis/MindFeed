@@ -1,0 +1,44 @@
+name: mind_feed
+description: "A personalized news app"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+  get_it: ^8.2.0
+  intl: ^0.20.2
+  flutter_hooks: ^0.21.2
+  retrofit: ^4.6.0
+  cached_network_image: ^3.4.1
+  hive: ^2.2.3
+  path_provider: ^2.1.5
+  hive_flutter: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  retrofit_generator: ^9.7.0
+  build_runner: ^2.5.4
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Mulish
+      fonts:
+        - asset: assets/fonts/mulish/Mulish-Regular.ttf
+        - asset: assets/fonts/mulish/Mulish-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/mulish/Mulish-Light.ttf
+          weight: 300
