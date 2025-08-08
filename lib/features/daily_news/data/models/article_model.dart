@@ -1,4 +1,4 @@
-import 'package:mind_feed/features/auth/domain/entities/article.dart';
+import 'package:mind_feed/features/daily_news/domain/entities/article.dart';
 
 class ArticleModel extends ArticleEntity {
   const ArticleModel({

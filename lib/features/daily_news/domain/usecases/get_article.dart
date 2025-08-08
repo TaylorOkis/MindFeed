@@ -1,5 +1,5 @@
 import 'package:mind_feed/core/usecases/usecase.dart';
-import 'package:mind_feed/features/auth/domain/repository/article_repository.dart';
+import 'package:mind_feed/features/daily_news/domain/repository/article_repository.dart';
 
 import '../../../../core/resources/data_state.dart';
 import '../entities/article.dart';

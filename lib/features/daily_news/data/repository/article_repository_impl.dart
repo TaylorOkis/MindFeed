@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:mind_feed/features/auth/data/data_sources/remote/news_api_service.dart';
-import 'package:mind_feed/features/auth/domain/repository/article_repository.dart';
+import 'package:mind_feed/features/daily_news/data/data_sources/remote/news_api_service.dart';
+import 'package:mind_feed/features/daily_news/domain/repository/article_repository.dart';
 
 import '../../../../core/constants/constants.dart';
 import '../../../../core/resources/data_state.dart';
