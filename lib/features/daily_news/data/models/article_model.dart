@@ -3,6 +3,8 @@ import 'package:uuid/uuid.dart';
 
 import '../../domain/entities/article.dart';
 
+part 'article_model.g.dart';
+
 @HiveType(typeId: 0)
 class ArticleModel {
   @HiveField(0)
