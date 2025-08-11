@@ -6,14 +6,14 @@ import 'package:mind_feed/features/daily_news/domain/repository/article_reposito
 
 import '../../../../core/constants/constants.dart';
 import '../../../../core/resources/data_state.dart';
-import '../models/article_model.dart';
+import '../../domain/entities/article.dart';
 
 class ArticleRepositoryImpl implements ArticleRepository {
   final NewsApiService _newsApiService;
   ArticleRepositoryImpl(this._newsApiService);
 
   @override
-  Future<DataState<List<ArticleModel>>> getNewsArticles() async {
+  Future<DataState<List<ArticleEntity>>> getNewsArticles() async {
     try {
       final httpResponse = await _newsApiService.getNewsArticles(
         apiKey: newsAPIKey,
@@ -22,7 +22,8 @@ class ArticleRepositoryImpl implements ArticleRepository {
       );
 
       if (httpResponse.response.statusCode == HttpStatus.ok) {
-        return DataSuccess(httpResponse.data);
+        final entities = httpResponse.data.map((m) => m.toEntity()).toList();
+        return DataSuccess(entities);
       } else {
         return DataFailure(
           DioException(
